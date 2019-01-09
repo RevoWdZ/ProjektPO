@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="633.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projektporun.DataBaseMenuController">
+   <children>
+      <Line endX="-99.5" endY="587.0" layoutX="567.0" layoutY="46.0" startX="-99.5" startY="-46.0" />
+      <TitledPane layoutX="473.0" layoutY="14.0" prefHeight="240.0" prefWidth="448.0" text="Dodaj studenta do bazy dancyh">
+         <content>
+            <Pane prefHeight="223.0" prefWidth="446.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię" wrappingWidth="80.7109375">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupa" wrappingWidth="58.4443359375">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocena">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="16.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Przedmiot">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textFieldStudentName" layoutX="113.0" layoutY="9.0" />
+                  <TextField fx:id="TextFieldStudentUserName" layoutX="113.0" layoutY="39.0" />
+                  <TextField fx:id="subjectField" layoutX="114.0" layoutY="128.0" />
+                  <Button fx:id="addButton" layoutX="141.0" layoutY="166.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="93.0" text="Dodaj">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="setGroup" layoutX="113.0" layoutY="69.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="setMark" layoutX="112.0" layoutY="99.0" prefWidth="150.0" />
+                  <Text fx:id="wykonanoDodanie" fill="#28a128" layoutX="16.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomyślnie wykonano" />
+               </children>
+            </Pane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="473.0" layoutY="263.0" prefHeight="355.0" prefWidth="448.0" text="Modyfikacje">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TabPane layoutY="1.0" prefHeight="328.0" prefWidth="448.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Student">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="306.0" prefWidth="448.0">
+                                 <children>
+                                    <Button fx:id="deleteStudent" layoutX="178.0" layoutY="23.0" mnemonicParsing="false" text="Usuń studenta" />
+                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zaznacz studenta na liście,a następnie naciśnij &quot;Usuń studenta&quot;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="127.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukaj studenta po imienu">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="searchingField" layoutX="150.0" layoutY="81.0" />
+                                    <Button fx:id="updateStudent" layoutX="185.0" layoutY="137.0" mnemonicParsing="false" text="Aktualizacja" />
+                                    <Text layoutX="60.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aby zaktualizować studenta naciśnij &quot;Aktualizacja&quot;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Grupa">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="316.0" prefWidth="448.0">
+                                 <children>
+                                    <Text layoutX="32.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zaznacz grupę na liście,a następnie naciśnij &quot;Usuń grupę&quot;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="deleteGroup" layoutX="185.0" layoutY="25.0" mnemonicParsing="false" text="Usuń grupę" />
+                                    <Text layoutX="68.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aby zaktualizować grupę naciśnij &quot;Aktualizacja&quot;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="groupUpdate" layoutX="184.0" layoutY="80.0" mnemonicParsing="false" text="Aktualizacja" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Ocena">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="69.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aby zaktualizować ocenę naciśnij &quot;Aktualizacja&quot;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="updateMark" layoutX="185.0" layoutY="24.0" mnemonicParsing="false" text="Aktualizacja" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Przedmiot">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="18.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zaznacz przedmiot na liście,a następnie naciśnij &quot;Usuń przedmiot&quot;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="deletePrzedmiot" layoutX="174.0" layoutY="24.0" mnemonicParsing="false" text="Usuń przedmiot" />
+                                    <Text layoutX="122.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukaj przedmiot po nazwie">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="searchingSubjectField" layoutX="150.0" layoutY="76.0" />
+                                    <Text layoutX="54.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aby zaktualizować przedmiot naciśnij &quot;Aktualizacja&quot;">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="updateSubject" layoutX="185.0" layoutY="129.0" mnemonicParsing="false" text="Aktualizacja" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="605.0" prefWidth="436.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Studenci">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableViewStudent" layoutX="6.0" layoutY="8.0" prefHeight="560.0" prefWidth="420.0">
+                          <columns>
+                            <TableColumn fx:id="col_imie" prefWidth="211.0" text="Imię" />
+                              <TableColumn fx:id="col_nazwisko" prefWidth="209.0" text="Nazwisko" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Grupy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableViewGroup" layoutX="6.0" layoutY="8.0" prefHeight="560.0" prefWidth="420.0">
+                          <columns>
+                            <TableColumn fx:id="group_name" prefWidth="420.0" text="Nazwa grupy" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Oceny">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableViewMarks" layoutX="6.0" layoutY="8.0" prefHeight="560.0" prefWidth="420.0">
+                          <columns>
+                            <TableColumn fx:id="col_mark" prefWidth="49.0" text="Ocena" />
+                              <TableColumn fx:id="col_Marks_subject_name" prefWidth="135.0" text="Nazwa przedmiotu" />
+                              <TableColumn prefWidth="109.0" text="Imię studenta" />
+                              <TableColumn prefWidth="125.0" text="Nazwisko studenta" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Przedmioty">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableViewSubject" layoutX="6.0" layoutY="8.0" prefHeight="560.0" prefWidth="420.0">
+                          <columns>
+                            <TableColumn fx:id="col_subject_name" prefWidth="421.0" text="Nazwa przedmiotu" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
